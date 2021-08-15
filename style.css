@@ -16,6 +16,16 @@
   line-height: 1.5;
   transition: all 0.3s linear;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 html {
   font-size: 62.5%;
@@ -110,7 +120,7 @@ header .follow a:hover {
 .home .image {
   flex: 1 1 40rem;
 }
-.home .image img {
+.home .image svg {
   width: 100%;
 }
 .home .content {
@@ -152,10 +162,11 @@ header .follow a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 .about .row-1 .image {
-  flex: 1 1 25rem;
+  flex: 1 1 5rem;
 }
 .about .row-1 .image img {
   height: 100%;
@@ -520,6 +531,9 @@ footer span {
   }
   header.active {
     left: 0%;
+  }
+  .content {
+    padding-top: 5rem;
   }
 }
 
