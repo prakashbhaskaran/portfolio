@@ -166,18 +166,23 @@ header .follow a:hover {
   padding-top: 5rem;
 }
 .about .row-1 .image {
-  flex: 1 1 5rem;
+  flex: 1 1 10rem;
 }
 .about .row-1 .image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border: 1rem solid #fff;
+  border: 0.5rem solid #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .about .row-1 .content {
   flex: 1 1 50rem;
+  padding: 10px;
+  border: 0.5rem solid #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .about .row-1 .content h3 {
   color: #333;
@@ -194,6 +199,7 @@ header .follow a:hover {
   gap: 1.5rem;
   padding: 0.5rem 0;
 }
+
 .about .row-1 .content .box-container .box {
   flex: 1 1 20rem;
 }
@@ -516,6 +522,11 @@ footer span {
 }
 
 /*media*/
+@media screen and (max-width: 1350px) {
+  .about .row-1 {
+    flex-direction: column;
+  }
+}
 @media screen and (max-width: 991px) {
   html {
     font-size: 55%;
