@@ -102,7 +102,7 @@ header .follow a:hover {
   top: 1rem;
   right: 1rem;
   z-index: 10000;
-
+  background: #222;
   color: #fff;
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
