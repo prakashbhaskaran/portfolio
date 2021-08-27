@@ -168,18 +168,18 @@ header .follow a:hover {
 .about .row-1 .image {
   flex: 1 1 10rem;
 }
-.about .row-1 .image img {
+.about .row-1 .image svg {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border: 0.5rem solid #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  /*   border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); */
 }
 .about .row-1 .content {
   flex: 1 1 50rem;
   padding: 10px;
-  border: 0.5rem solid #fff;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -519,6 +519,22 @@ footer {
 
 footer span {
   color: var(--main-color);
+}
+
+#about-svg {
+  animation: head 2s linear infinite;
+}
+@keyframes head {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(1deg);
+  }
 }
 
 /*media*/
