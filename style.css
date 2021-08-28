@@ -2,6 +2,7 @@
 
 :root {
   --main-color: #3399ff;
+  --white: #fff;
 }
 
 * {
@@ -41,7 +42,7 @@ body {
 section {
   padding: 1rem 5%;
   min-height: 100vh;
-  color: #fff;
+  color: var(--white);
 }
 
 header {
@@ -62,7 +63,7 @@ header {
 
 header .logo {
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white);
   font-size: 3rem;
   font-weight: bolder;
 }
@@ -79,7 +80,7 @@ header .navbar {
 header .navbar a {
   display: block;
   font-size: 2rem;
-  color: #fff;
+  color: var(--white);
   margin: 2rem 0;
 }
 
@@ -90,7 +91,7 @@ header .navbar a:hover {
 
 header .follow a {
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--white);
   margin: 0 0.7rem;
 }
 header .follow a:hover {
@@ -103,7 +104,7 @@ header .follow a:hover {
   right: 1rem;
   z-index: 10000;
   background: #222;
-  color: #fff;
+  color: var(--white);
   border-radius: 0.5rem;
   padding: 1rem 1.5rem;
   font-size: 3rem;
@@ -139,10 +140,6 @@ header .follow a:hover {
   font-size: 2.5rem;
   padding: 1rem 0;
 }
-.home .content .text {
-  font-size: 1.7rem;
-  padding: 5rem 0;
-}
 
 .btn {
   display: inline-block;
@@ -151,10 +148,10 @@ header .follow a:hover {
   background: var(--main-color);
   cursor: pointer;
   font-size: 1.7rem;
-  color: #fff;
+  color: var(--white);
 }
 .btn:hover {
-  background: #fff;
+  background: var(--white);
   color: black;
 }
 
@@ -186,7 +183,7 @@ header .follow a:hover {
   font-size: 3.5rem;
 }
 .about .row-1 .content p {
-  color: #666;
+  color: var(--white);
   font-size: 1.7rem;
   padding: 0.5rem 0;
 }
@@ -222,7 +219,7 @@ header .follow a:hover {
   justify-content: space-between;
   padding: 0.7rem 0;
   font-size: 1.7rem;
-  color: #fff;
+  color: var(--white);
   font-weight: 400;
 }
 .about .row-2 .skills .progress .bar {
@@ -254,10 +251,10 @@ header .follow a:hover {
 
 .about .row-2 .box-container .box {
   flex: 1 1 15rem;
-  background: #fff;
+  background: #111;
   padding: 2rem;
   border-radius: 0.5rem;
-  color: #111;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
 }
 
 .about .row-2 .box-container .box h3 {
@@ -265,7 +262,7 @@ header .follow a:hover {
   font-size: 3rem;
 }
 .about .row-2 .box-container .box p {
-  color: #666;
+  color: var(--white);
   font-size: 1.7rem;
   padding-top: 0.7rem;
 }
@@ -273,7 +270,7 @@ header .follow a:hover {
 .heading {
   font-size: 4rem;
   padding-bottom: 1rem;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
 }
 .heading span {
@@ -290,10 +287,10 @@ header .follow a:hover {
   flex: 1 1 30rem;
   text-align: center;
   padding: 2rem;
-  background: #fff;
-  color: #111;
+  background: #111;
+  color: var(--white);
   border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
 }
 
 .service .box-container .box i {
@@ -301,13 +298,13 @@ header .follow a:hover {
   width: 6rem;
   line-height: 6rem;
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--white);
   background: var(--main-color);
   border-radius: 50%;
 }
 
 .service .box-container .box h3 {
-  color: #444;
+  color: var(--white);
   font-size: 2.2rem;
   padding-top: 1rem;
 }
@@ -344,23 +341,24 @@ header .follow a:hover {
 }
 
 .experience .box-container .box .content {
-  background: #fff;
+  background: #111;
   padding: 1.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
   border-radius: 0.5rem;
+  line-height: 3;
 }
 
 .experience .box-container .box .content span {
-  color: #fff;
+  color: var(--white);
   font-size: 1.7rem;
   background: var(--main-color);
   border-radius: 50rem;
-  padding: 0.4rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .experience .box-container .box .content p {
   font-size: 1.5rem;
-  color: #111;
+  color: var(--white);
 }
 
 .portfolio .box-container {
@@ -397,7 +395,7 @@ header .follow a:hover {
   bottom: 0.5rem;
   left: 1rem;
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--white);
   text-transform: uppercase;
 }
 
@@ -422,7 +420,7 @@ header .follow a:hover {
 
 .portfolio .box-container .box .icons a:hover {
   background: var(--main-color);
-  color: #fff;
+  color: var(--white);
 }
 
 .contact .icons-container {
@@ -435,10 +433,9 @@ header .follow a:hover {
   flex: 1 1 25rem;
   text-align: center;
   padding: 2rem;
-  background: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #111;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
   border-radius: 0.5rem;
-  color: #111;
 }
 
 .contact .icons-container .icons i {
@@ -446,13 +443,13 @@ header .follow a:hover {
   width: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  color: #fff;
+  color: var(--white);
   background: var(--main-color);
   border-radius: 50%;
 }
 
 .contact .icons-container .icons h3 {
-  color: #111;
+  color: var(--white);
   font-size: 2rem;
   padding: 0.5rem 0;
 }
@@ -469,22 +466,29 @@ header .follow a:hover {
 }
 .contact .row form {
   flex: 1 1 55rem;
-  background: #fff;
+  background: #111;
   padding: 0 2rem;
-  background: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: 0 0 1rem rgba(0, 0, 0, 1);
   border-radius: 0.5rem;
 }
 .contact .row form .box,
 .contact .row form textarea {
   width: 100%;
   border-bottom: 0.1rem solid #333;
-  color: #333;
+  color: var(--white);
   text-transform: none;
   font-size: 1.7rem;
   padding: 1rem 0;
   margin: 1rem 0;
+  background: #111;
 }
-
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  background: #111;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .contact .row form .box:focus,
 .contact .row form textarea:focus {
   border-color: var(--main-color);
@@ -511,14 +515,15 @@ footer {
   padding: 2.5rem;
   text-align: center;
   color: #666;
-  background: #fff;
+  background: #111;
 }
 
 footer span {
   color: var(--main-color);
 }
 
-#about-svg {
+#about-svg,
+.home-svg {
   animation: head 2s linear infinite;
 }
 @keyframes head {
