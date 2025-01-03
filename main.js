@@ -2,14 +2,9 @@ let menu = document.querySelector("#menu-bars");
 let header = document.querySelector("header");
 let cursor = document.querySelector(".cursor");
 
-const form = document.querySelector("form");
-const email = document.querySelector("#email");
-const emailerror = document.querySelector(".emailerror");
-const uname = document.querySelector("#name");
-const unameerror = document.querySelector(".unameerror");
-const text = document.querySelector("#text");
 const portfolio = document.querySelector("#portfolio-container");
-const gracias = document.querySelector(".gracias");
+const service = document.querySelector("#service-container");
+const skill = document.querySelector("#skill-container");
 
 const portfolioList = [
   { name: "Ecommerce Store", link: "https://kart.webibee.com" },
@@ -17,6 +12,20 @@ const portfolioList = [
   { name: "PLAINLIGHTS", link: "https://plainlights.com" },
   { name: "OS CRANE PARTS", link: "https://oscraneparts.com" },
   { name: "DYNAMAC DIGITAL", link: "https://dynamacdigital.vercel.app" },
+];
+const serviceList = [
+  { name: "Frontend Development", icon: "fas fa-mobile" },
+  { name: "API Integration", icon: "fas fa-network-wired" },
+  { name: "Vercel Hosting", icon: "fa-solid fa-v" },
+  { name: "Domain Buying", icon: "fa-solid fa-server" },
+  { name: "Static Page Development", icon: "fa-solid fa-file" },
+  { name: "Ecommerce Development", icon: "fa-solid fa-cart-shopping" },
+];
+const skillList = [
+  { name: "React JS", fill: "80%", duration: "1200" },
+  { name: "Next JS", fill: "80%", duration: "1400" },
+  { name: "Node JS", fill: "70%", duration: "1600" },
+  { name: "API Integration", fill: "90%", duration: "1800" },
 ];
 
 portfolioList.forEach((item) => {
@@ -39,6 +48,29 @@ portfolioList.forEach((item) => {
                           </div>
                         </div>`;
 });
+serviceList.forEach((item) => {
+  service.innerHTML += `<div
+                          class="box"
+                          data-aos="zoom-in"
+                          data-aos-duration="1500"
+                          data-aos-once="true"
+                        >
+                          <i class='${item.icon}'></i>
+                          <h3>${item.name}</h3>
+                        </div>`;
+});
+skillList.forEach((item) => {
+  skill.innerHTML += `<div
+                        class="progress"
+                        
+                        data-aos="fade-right"
+                        data-aos-duration='${item.duration}'
+                        data-aos-once="true"
+                      >
+                        <h3>${item.name}<span>${item.fill}</span></h3>
+                        <div class="bar"><span style="width: ${item.fill}"></span></div>
+                      </div>`;
+});
 
 menu.onclick = () => {
   menu.classList.toggle("fa-times");
@@ -48,44 +80,3 @@ window.onscroll = () => {
   menu.classList.remove("fa-times");
   header.classList.remove("active");
 };
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (emailchange() && namechange()) {
-    const data = {
-      username: uname.value,
-      email: email.value,
-      text: text.value,
-    };
-    form.style.display = "none";
-    gracias.style.display = "block";
-  }
-});
-
-function emailchange() {
-  if (
-    email.value.match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    )
-  ) {
-    emailerror.innerHTML = "";
-    return true;
-  } else {
-    emailerror.innerHTML = "Invalid email";
-  }
-}
-
-function namechange() {
-  if (uname.value.length < 6) {
-    unameerror.innerHTML = "Name must be greater than or equal to 6 characters";
-  } else if (
-    uname.value.match(/[^\w\s]/gi) ||
-    uname.value.match(/\d+/) ||
-    !uname.value.match(/^\S*$/)
-  ) {
-    unameerror.innerHTML = "No special characters or numbers or whitespaces ";
-  } else {
-    unameerror.innerHTML = "";
-    return true;
-  }
-}
