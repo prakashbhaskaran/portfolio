@@ -4,7 +4,7 @@ let cursor = document.querySelector(".cursor");
 
 const portfolio = document.querySelector("#portfolio-container");
 const service = document.querySelector("#service-container");
-const skill = document.querySelector("#skill-container");
+const contact = document.querySelector("#contact-container");
 
 const portfolioList = [
   { name: "Ecommerce Store", link: "https://kart.webibee.com" },
@@ -13,6 +13,11 @@ const portfolioList = [
   { name: "OS CRANE PARTS", link: "https://oscraneparts.com" },
   { name: "DYNAMAC DIGITAL", link: "https://dynamacdigital.vercel.app" },
 ];
+const contactList = [
+  { title: "Email", value: "elprakashb@gmail.com", icon: "fas fa-envelope" },
+  { title: "Instagram", value: "@bprakash64", icon: "fab fa-instagram" },
+  { title: "WhatsApp", value: "+91 9566090422", icon: "fa-brands fa-whatsapp" },
+];
 const serviceList = [
   { name: "Frontend Development", icon: "fas fa-mobile" },
   { name: "API Integration", icon: "fas fa-network-wired" },
@@ -20,12 +25,6 @@ const serviceList = [
   { name: "Domain Buying", icon: "fa-solid fa-server" },
   { name: "Static Page Development", icon: "fa-solid fa-file" },
   { name: "Ecommerce Development", icon: "fa-solid fa-cart-shopping" },
-];
-const skillList = [
-  { name: "React JS", fill: "80%", duration: "1200" },
-  { name: "Next JS", fill: "80%", duration: "1400" },
-  { name: "Node JS", fill: "70%", duration: "1600" },
-  { name: "API Integration", fill: "90%", duration: "1800" },
 ];
 
 portfolioList.forEach((item) => {
@@ -59,17 +58,18 @@ serviceList.forEach((item) => {
                           <h3>${item.name}</h3>
                         </div>`;
 });
-skillList.forEach((item) => {
-  skill.innerHTML += `<div
-                        class="progress"
-                        
-                        data-aos="fade-right"
-                        data-aos-duration='${item.duration}'
-                        data-aos-once="true"
-                      >
-                        <h3>${item.name}<span>${item.fill}</span></h3>
-                        <div class="bar"><span style="width: ${item.fill}"></span></div>
-                      </div>`;
+
+contactList.forEach((item) => {
+  contact.innerHTML += ` <div
+                          class="icons"
+                          data-aos="zoom-in"
+                          data-aos-duration="1500"
+                          data-aos-once="true"
+                        >
+                          <i class='${item.icon}'> </i>
+                          <h3>${item.title}</h3>
+                          <p>${item.value}</p>
+                        </div>`;
 });
 
 menu.onclick = () => {
