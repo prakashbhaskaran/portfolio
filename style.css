@@ -483,6 +483,6 @@ footer span {
 
 @media screen and (max-width: 786px) {
   .card img {
-    object-fit: contain;
+    object-fit: fill;
   }
 }
