@@ -74,6 +74,7 @@ portfolioList.forEach((item) => {
                                     >
                                     <img
                                       src='${item.image}'
+                                      alt='${item.name}'
                                     />
                                     <div class="card-detail">
                                     <div><h3 class="card-title">${item.name}</h3> </div>
