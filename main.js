@@ -43,7 +43,7 @@ const serviceList = [
   { name: "Frontend Development", icon: "fas fa-mobile" },
   { name: "API Integration", icon: "fas fa-network-wired" },
   { name: "Vercel Hosting", icon: "fa-solid fa-v" },
-  { name: "Domain Buying", icon: "fa-solid fa-server" },
+  { name: "Domain Configuring", icon: "fa-solid fa-server" },
   { name: "Static Page Development", icon: "fa-solid fa-file" },
   { name: "Ecommerce Development", icon: "fa-solid fa-cart-shopping" },
 ];

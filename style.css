@@ -218,6 +218,9 @@ header .follow a:hover {
   padding-top: 0.5rem;
 }
 
+.portfolio {
+  min-height: 60vh !important;
+}
 .portfolio .box-container {
   display: flex;
   flex-wrap: wrap;
@@ -406,6 +409,7 @@ footer span {
 }
 .card-title {
   color: aliceblue;
+  text-align: center;
 }
 .card img {
   width: 100% !important;
@@ -483,6 +487,6 @@ footer span {
 
 @media screen and (max-width: 786px) {
   .card img {
-    object-fit: contain;
+    object-fit: cover;
   }
 }
